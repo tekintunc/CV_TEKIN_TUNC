@@ -28,7 +28,7 @@ body{
     background: #ACDDDE;
     padding-left: 30rem;
 }
-header{
+header {
     /* scrool oluşsada göruntü  hep yukarda fix kalması için ayrıca top: 0; left: 0; bottom: 0;
     vererek bunu sağlayacağız  */
     position: fixed;
@@ -38,7 +38,7 @@ header{
     align-items: center;
     justify-content: space-between;
     /* z-index: ; diyerek headerin en üstte (100 değeri verdiğimiz için) kalmasını sağlar */
-    z-index: 100;
+    z-index: 1000;
     /* header içerisindeki elemanların stun gibi davranmalarını sağlar */
     flex-flow: column;
     /* rem relative demek yanii nispi büyüklük */
@@ -63,7 +63,7 @@ header .navbar a{
     margin: 2rem 0;
 }
 header .navbar a:hover{
-    letter-spacing: 2rem;
+    letter-spacing: 0.2rem;
     color: var(--main-color);
     
 }
