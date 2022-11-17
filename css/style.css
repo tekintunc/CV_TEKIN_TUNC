@@ -31,7 +31,28 @@ body{
 section{
     padding: 1rem 5%;
     min-height: 100vh;
-
+}
+.heading{
+    font-size: 4rem;
+    padding-bottom: 1rem;
+    color: #111;
+    text-transform: uppercase;
+}
+.heading span{
+    color: var(--main-color);
+}
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding:0.8rem 3rem;
+    background: var(--main-color);
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.6rem;
+}
+.btn:hover{
+    background: #111;
+    letter-spacing: 0.2rem;
 }
 header {
     /* scrool oluşsada göruntü  hep yukarda fix kalması için ayrıca top: 0; left: 0; bottom: 0;
@@ -168,6 +189,28 @@ ve statiktir. */
 .home .content .h3{
     font-size: 4.5rem;
     color: #111;
+    text-transform: uppercase;
+}
+
+.home .content h3{
+    font-size: 4.5rem;
+    color: #111;
+    text-transform: uppercase;
+}
+.home .content h3 span{
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.home .content .info{
+    font-size: 2.5rem;
+    color: #111;
+    padding: 0.5rem 0;
+}
+.home .content .text{
+    font-size: 1.6rem;
+    color: #666;
+    padding: 0.5rem 0;
 }
 
 
