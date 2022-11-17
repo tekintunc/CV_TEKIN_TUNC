@@ -28,6 +28,11 @@ body{
     background: #ACDDDE;
     padding-left: 30rem;
 }
+section{
+    padding: 1rem 5%;
+    min-height: 100vh;
+
+}
 header {
     /* scrool oluşsada göruntü  hep yukarda fix kalması için ayrıca top: 0; left: 0; bottom: 0;
     vererek bunu sağlayacağız  */
@@ -89,6 +94,83 @@ header .follow a:hover{
     display: none;
 }
 
+/* kursörün içindeki küçük daire için */
+/* Burada ana mantık iki adet ilave kursor oluşturup (cursor-1 ve cursor-2) pointer-events: none; yaparak
+tıklama özelliklrini kaldırıyoruz.Ayrıca küçük disk olan cursor-1 de transform: translate(-50%, -50%);
+diyerek mouse etrafında salınım yapmasını sağlıyoruz(js sayesinde) Normalde bu komut nesneleri kaydırmaya yarar
+ve statiktir. */ 
+
+.cursor-1{
+    position: absolute;
+    top: 500px;
+    left: 500px;
+    height: 1rem;
+    width: 1rem;
+    background: var(--main-color);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 999999;
+    
+}
+
+.cursor-1.active{
+    height: 7rem;
+    width: 7rem;
+    opacity: 0.3;
+}
+
+.cursor-2{
+    position: absolute;
+    top: 500px;
+    left: 500px;
+    height: 4rem;
+    width: 4rem;
+    /* bg color'u kaldırıp border vererek halka şekli oluştu */
+    border: 0.1rem solid var(--main-color);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 999999;
+    transition: 0.3s linear;
+
+}
+
+.cursor-2.active {
+    display: none;
+}
+.home{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    /* gap ile çevre boşluğu veriyoruz */
+    gap: 1.5rem;
+}
+
+.home .image{
+    flex:1 1 40rem;
+
+}
+.home .image img{
+    width: 100%;
+
+}
+
+
+.home .content{
+    flex:1 1 40rem;
+
+}
+.home .content .hi{
+    font-size: 2rem;
+    color: var(--main-color);
+}
+.home .content .h3{
+    font-size: 4.5rem;
+    color: #111;
+}
+
+
 
 
 
@@ -122,7 +204,14 @@ header .follow a:hover{
         left: 0%;
 
     }
-     }
+    
+/* sayfa küçüldüğünde kursör efektlerinin kalkması için */
+    .cursor-1,
+    .cursor-2{
+        display: none;
+    }
+
+    }
 
  @media (max-width:450px){
 
